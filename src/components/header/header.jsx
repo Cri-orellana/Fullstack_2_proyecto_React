@@ -28,7 +28,7 @@ const Header = () => {
             <NavDropdown.Item as={Link} to="/productos/mitos">Mitos y Leyendas</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="/usuarios">Ingresar</Nav.Link>
+            <Nav.Link as={Link} to="/ingreso">Ingresar</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>

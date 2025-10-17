@@ -1,61 +1,58 @@
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import { Card } from 'react-bootstrap';
-import { Tab } from 'bootstrap';
+import React from 'react';
+import { Container, Tabs, Tab, Form, Button } from 'react-bootstrap';
+import './registroUsuario.css';
 
 const RegistroUsuario = () => {
   return (
-    <div>
-    <Tabs
-      defaultActiveKey="profile"
-      id="uncontrolled-tab-example"
-      className="mb-3"
-    >
-      <Tab eventKey="Registro" title="Registro">
-        <Card className="tarjeta-Registro">
-            <Card.Img variant="top" src={producto.imagen} />
-            <Card.Body>
-            <form>
-            <div class="form-group">
-                <label for="usuario">Ingrese su usuario</label>
-                <input type="usuario" class="formulario" id="input-formu"/>
-            </div>
-            <div class="form-group">
-                <label for="contraseña">Ingrese su contraseña</label>
-                <input type="clave" class="formulario" id="input-formu"/>
-            </div>
-            <div class="form-group">
-                <label for="confirmar-contraseña">Reingrese su contraseña</label>                
-                <input type="clave" class="formulario" id="input-formu"/>
-            </div>
-            <div class='form-group form-check'>
-                <input type="checkbox" class="formulario-box" id="checkbox-formu"/>
-                <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-            </form>
-            </Card.Body>
-        </Card>
-      </Tab>
-      <Tab eventKey="Iniciar sesion" title="Iniciar sesion">
-        <Card className="tarjeta-Registro">
-            <Card.Body>
-            <form>
-            <div class="form-group">
-                <label for="usuario">Ingrese su usuario</label>
-                <input type="usuario" class="formulario" id="input-formu"/>
-            </div>
-            <div class="form-group">
-                <label for="contraseña">Ingrese su contraseña</label>
-                <input type="clave" class="formulario" id="input-formu"/>
-            </div>
-            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-            </form>
-            </Card.Body>
-        </Card>
-      </Tab>
-    </Tabs>
-    </div>
+    <Container className="contenedor-registro">
+      <Tabs defaultActiveKey="registro" id="tabs-registro" className="mb-3 tarjeta-registro-tabs" fill>
+        
+        <Tab eventKey="registro" title="Registro">
+          <Form className="p-4">
+            <Form.Group className="mb-3" controlId="usuario-reg">
+              <Form.Label>Ingrese su usuario</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="pass-reg">
+              <Form.Label>Ingrese su contraseña</Form.Label>
+              <Form.Control type="password" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="pass-confirm">
+              <Form.Label>Reingrese su contraseña</Form.Label>
+              <Form.Control type="password" />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Check type="checkbox" label="Acepto términos y condiciones" id="checkbox-formu" />
+            </Form.Group>
+
+            <Button variant="danger" type="submit" className="w-100">
+              Registrarse
+            </Button>
+          </Form>
+        </Tab>
+
+        <Tab eventKey="iniciar-sesion" title="Iniciar Sesión">
+          <Form className="p-4">
+            <Form.Group className="mb-3" controlId="usuario-login">
+              <Form.Label>Ingrese su usuario</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="pass-login">
+              <Form.Label>Ingrese su contraseña</Form.Label>
+              <Form.Control type="password" />
+            </Form.Group>
+
+            <Button variant="danger" type="submit" className="w-100">
+              Iniciar sesión
+            </Button>
+          </Form>
+        </Tab>
+      </Tabs>
+    </Container>
   );
 }
 

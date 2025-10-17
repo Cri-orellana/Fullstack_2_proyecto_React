@@ -7,11 +7,12 @@ import Footer from './components/footer/footer.jsx';
 import Inicio from './Inicio.jsx';
 import Nosotros from './Nosotros.jsx';
 import PaginaProductos from './components/paginas/paginaProductos.jsx';
-import Ingreso from './Ingreso.jsx'
+import Ingreso from './Ingreso.jsx';
+import './App.css';
 
 function Layout() {
   return (
-    <div>
+    <div className="layout-principal">
       <Header />
       <main>
         <Outlet />
@@ -27,10 +28,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Inicio />} />
         <Route path="nosotros" element={<Nosotros />} />
-        
         <Route path="productos/:franquicia" element={<PaginaProductos />} />
-        <Route path="registroUsuario" element={<RegistroUsuario />} />
-
+        <Route path="ingreso" element={<Ingreso />} />
       </Route>
     </Routes>
   );
