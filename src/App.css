@@ -1,4 +1,19 @@
 #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-principal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.layout-principal main {
+  flex-grow: 1;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,4 +55,3 @@
 .read-the-docs {
   color: #888;
 }
-
