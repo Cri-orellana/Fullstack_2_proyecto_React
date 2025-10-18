@@ -46,7 +46,12 @@ const Header = () => {
             <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
             <Nav.Link as={Link} to="/ingreso">Ingresar</Nav.Link>
-            <NavDropdown title="Productos" id="basic-nav-dropdown">
+            
+            <NavDropdown 
+              title="Productos" 
+              id="basic-nav-dropdown" 
+              align="end"
+            >
               <NavDropdown.Item as={Link} to="/productos/pokemon">Pokemon</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/productos/yugioh">Yu-Gi-Oh!</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/productos/magic">Magic</NavDropdown.Item>
