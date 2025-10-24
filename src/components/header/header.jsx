@@ -62,12 +62,6 @@ const Header = () => {
             <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
             <Nav.Link as={Link} to="/ingreso">Ingresar</Nav.Link>
-            <Nav.Link as={Link} to="/carrito" className="d-flex align-items-center">
-              Carrito
-              {cantidadTotalArticulos > 0 && (
-                <Badge pill bg="danger" className="ms-2">{cantidadTotalArticulos}</Badge>
-              )}
-            </Nav.Link>
             <NavDropdown
               title="Productos"
               id="basic-nav-dropdown"
@@ -78,6 +72,13 @@ const Header = () => {
               <NavDropdown.Item as={Link} to="/productos/magic">Magic</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/productos/mitos">Mitos y Leyendas</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/carrito" className="d-flex align-items-center">
+              Carrito
+              {cantidadTotalArticulos > 0 && (
+                <Badge pill bg="danger" className="ms-2">{cantidadTotalArticulos}</Badge>
+              )}
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
