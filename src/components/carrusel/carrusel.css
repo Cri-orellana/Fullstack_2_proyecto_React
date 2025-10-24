@@ -1,0 +1,13 @@
+.carousel {
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.carousel-item img.imagen-carrusel {
+  height: 450px !important;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+}
